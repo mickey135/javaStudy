@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.dao.StudentDao">
+    <select id="selectStudents" resultType="com.study.domain.Student">
+        select id,name,email,age from student order by id
+    </select>
+
+    <select id="selectStudentById" parameterType="java.lang.Integer" resultType="com.study.domain.Student">
+        select id,name,email,age from student where id=#{id}
+    </select>
+
+    <select id="selectMultiParam" resultType="com.study.domain.Student">
+        select id,name,email,age from student where name=#{myname} and age=#{myage}
+    </select>
+
+    <select id="selectStudentReturnViewStudent" resultType="com.study.vo.ViewStudent">
+        select id,name,email,age from student where id=#{sid}
+    </select>
+
+    <select id="countStudent" resultType="Integer">
+        select count(*) from student
+    </select>
+
+    <select id="selectMapById" resultType="java.util.HashMap">
+        select id,name,email,age from student where id=#{stuid}
+    </select>
+
+
+    <!--插入操作-->
+    <insert id="insertStudent">
+        insert into student (id,name,email,age) values (#{id},#{name},#{email},#{age})
+    </insert>
+</mapper>
