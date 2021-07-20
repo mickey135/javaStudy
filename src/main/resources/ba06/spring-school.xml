@@ -4,10 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="myStudent" class="org.example.ba06.Student" autowire="byType">
-        <property name="name" value="张三"/>
-        <property name="age" value="30"/>
-        <!--        <property name="school" ref="mySchool"/>-->
+
+    <bean id="mySchool" class="org.example.ba06.School">
+        <property name="name" value="航空大学"/>
+        <property name="address" value="北京的海淀区"/>
     </bean>
-    
+
+
 </beans>

@@ -4,10 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="myStudent" class="org.example.ba06.Student" autowire="byType">
-        <property name="name" value="张三"/>
-        <property name="age" value="30"/>
-        <!--        <property name="school" ref="mySchool"/>-->
-    </bean>
-    
+    <!--    <import resource="classpath:ba06/spring-school.xml"/>-->
+    <!--    <import resource="classpath:ba06/spring-student.xml"/>-->
+
+    <import resource="classpath:ba06/spring-*.xml"/>
 </beans>
