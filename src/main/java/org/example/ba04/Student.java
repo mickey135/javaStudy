@@ -1,6 +1,4 @@
-package org.example.ba01;
-
-import org.example.ba02.School;
+package org.example.ba04;
 
 public class Student {
 
@@ -10,7 +8,7 @@ public class Student {
     private School school;
 
     public Student() {
-        System.out.println("spring会调用类的无参数构造方法创建对象");
+//        System.out.println("spring会调用类的无参数构造方法创建对象");
     }
 
     public void setSchool(School school) {
@@ -19,12 +17,12 @@ public class Student {
     }
 
     public void setName(String name) {
-        System.out.println("setName:" + name);
+//        System.out.println("setName:" + name);
         this.name = name;
     }
 
     public void setAge(int age) {
-        System.out.println("setAge:" + age);
+//        System.out.println("setAge:" + age);
         this.age = age;
     }
 

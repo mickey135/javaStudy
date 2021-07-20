@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myStudent" class="org.example.ba03.Student">
+        <constructor-arg name="myname" value="张三"/>
+        <constructor-arg name="myage" value="20"/>
+        <constructor-arg name="mySchool" ref="myXueXiao"/>
+    </bean>
+
+    <bean id="myStudent2" class="org.example.ba03.Student">
+        <constructor-arg index="0" value="李四"/>
+        <constructor-arg index="1" value="26"/>
+        <constructor-arg index="2" ref="myXueXiao"/>
+    </bean>
+
+    <bean id="myStudent3" class="org.example.ba03.Student">
+        <constructor-arg value="张强强"/>
+        <constructor-arg value="22"/>
+        <constructor-arg ref="myXueXiao"/>
+    </bean>
+
+    <bean id="myXueXiao" class="org.example.ba03.School">
+        <property name="name" value="清华大学"/>
+        <property name="address" value="北京的海淀区"/>
+    </bean>
+
+    <bean id="myfile" class="java.io.File">
+        <constructor-arg name="parent" value="F:\xampp\htdocs\spring-course\javaStudy"/>
+        <constructor-arg name="child" value="readme.txt"/>
+    </bean>
+</beans>

@@ -1,6 +1,4 @@
-package org.example.ba01;
-
-import org.example.ba02.School;
+package org.example.ba03;
 
 public class Student {
 
@@ -11,6 +9,13 @@ public class Student {
 
     public Student() {
         System.out.println("spring会调用类的无参数构造方法创建对象");
+    }
+
+    public Student(String myname, int myage, School mySchool) {
+        System.out.println("====Student有参数构造方法====");
+        this.name = myname;
+        this.age = myage;
+        this.school = mySchool;
     }
 
     public void setSchool(School school) {

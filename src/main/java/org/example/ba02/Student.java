@@ -1,6 +1,4 @@
-package org.example.ba01;
-
-import org.example.ba02.School;
+package org.example.ba02;
 
 public class Student {
 
